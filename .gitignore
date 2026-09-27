@@ -1,0 +1,72 @@
+﻿# Environment / secrets
+.env
+.env.*
+!.env.example
+*.env
+secrets/
+.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.py[cod]
+*.class
+*.so
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Cache
+.cache/
+cache/
+data_cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+
+# ML generated artifacts
+*.joblib
+*.pkl
+*.pickle
+*.onnx
+
+# Generated reports / outputs
+outputs/
+reports/
+generated/
+tmp/
+temp/
+artifacts/*
+!artifacts/.gitkeep
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3

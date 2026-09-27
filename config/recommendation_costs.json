@@ -1,0 +1,63 @@
+{
+  "_comment": "Estimated implementation costs and monthly savings assumptions. These are NOT values learned from the dataset. They are documented engineering estimates used only for payback period calculations. All monetary values are in INR.",
+  "_currency": "INR",
+  "_energy_unit": "kWh",
+  "_tariff_kwh": 7.75,
+
+  "recommendations": {
+    "chiller_schedule_optimization": {
+      "title": "Chiller Schedule Optimization",
+      "description": "Adjust chiller start/stop times and staging schedules to align with actual building load patterns observed in the data.",
+      "estimated_implementation_cost": 5000,
+      "estimated_monthly_energy_saving_kwh_per_event": 320,
+      "priority_base": "MEDIUM",
+      "triggers": ["INVESTIGATE", "HIGH", "CRITICAL"],
+      "evidence_condition": "schedule"
+    },
+    "cooling_setpoint_optimization": {
+      "title": "Cooling Setpoint Optimization",
+      "description": "Optimise chilled-water supply temperature setpoints based on observed building load and outside temperature conditions.",
+      "estimated_implementation_cost": 3000,
+      "estimated_monthly_energy_saving_kwh_per_event": 240,
+      "priority_base": "MEDIUM",
+      "triggers": ["INVESTIGATE", "HIGH", "CRITICAL"],
+      "evidence_condition": "setpoint"
+    },
+    "preventive_maintenance": {
+      "title": "Preventive Maintenance",
+      "description": "Schedule inspection and cleaning of heat exchanger, condenser, and chilled-water circuits. Fouling or scale deposits can significantly increase energy consumption.",
+      "estimated_implementation_cost": 15000,
+      "estimated_monthly_energy_saving_kwh_per_event": 480,
+      "priority_base": "HIGH",
+      "triggers": ["HIGH", "CRITICAL"],
+      "evidence_condition": "maintenance"
+    },
+    "load_optimization": {
+      "title": "Building Load Optimization",
+      "description": "Implement demand-side management or review HVAC zone setpoints to reduce peak building load on the chiller plant.",
+      "estimated_implementation_cost": 8000,
+      "estimated_monthly_energy_saving_kwh_per_event": 400,
+      "priority_base": "MEDIUM",
+      "triggers": ["INVESTIGATE", "HIGH", "CRITICAL"],
+      "evidence_condition": "high_load"
+    },
+    "equipment_inspection": {
+      "title": "Equipment Inspection",
+      "description": "Conduct a physical inspection of the chiller unit including refrigerant charge, compressor staging, expansion valves, and controls.",
+      "estimated_implementation_cost": 10000,
+      "estimated_monthly_energy_saving_kwh_per_event": 360,
+      "priority_base": "HIGH",
+      "triggers": ["HIGH", "CRITICAL"],
+      "evidence_condition": "inspection"
+    },
+    "operating_schedule_adjustment": {
+      "title": "Operating Schedule Adjustment",
+      "description": "Review and adjust chiller plant operating hours to better match occupancy and building load patterns observed during the anomaly period.",
+      "estimated_implementation_cost": 2000,
+      "estimated_monthly_energy_saving_kwh_per_event": 200,
+      "priority_base": "LOW",
+      "triggers": ["WATCH", "INVESTIGATE"],
+      "evidence_condition": "schedule"
+    }
+  }
+}
